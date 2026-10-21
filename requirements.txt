@@ -1,7 +1,5 @@
-# Add the libraries your scripts actually import
-# Examples (uncomment and adjust as needed):
-# numpy
-# scipy
-# soundfile
-# pydub
-# librosa
+numpy
+scipy
+Pillow
+windnd
+soundfile
