@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*.bak
+*.backup*
+*_backup*
+*.wav
+*.mp3
+*.flac
+MixFlow_Output/
+*.log
+.DS_Store
+Thumbs.db
