@@ -1,0 +1,45 @@
+CONTINUIDAD — MIXFLOW V1 (2026-10-09, ESTADO ACTUAL)
+
+Continúa desde el código actual; no reinicies ni repitas trabajo. No pidas al usuario que vuelva a recopilar conversaciones/capturas. No declares funciones terminadas sin trazabilidad requisito → código → prueba.
+
+PC remoto: ALEXMOET-LAPTOP.
+Carpeta: C:\Users\andro\OneDrive\Escritorio\Python\
+Código principal V1: MixFlowAssistant.py
+Analizador: MixFlowAnalyzer.py
+Launcher: C:\Users\andro\OneDrive\Escritorio\MixFlow_Assistant.bat
+
+DECISIÓN ACTUAL OBLIGATORIA
+- Autotune/corrección de pitch se eliminó del código activo de MixFlow V1 y V2. No añadirlo ni restaurarlo.
+- Se retiraron las funciones, el flujo de preview, los parámetros de intensidad y la interfaz de afinación del código activo V1.
+- El alignment entre stems y el archivo Alignment/Referencia se conserva; no es autotune y no debe eliminarse.
+- Se preservan los modos MEZCLA/STEMS, análisis, recetas EQ/dinámica, ajustes de volumen/bandas, loudness, preview, aceptar/rechazar/UNDO, export WAV y protección de originales.
+- Los backups históricos se conservan como copias de recuperación, no son código activo ni deben incluirse en entregables ejecutables.
+
+CAMBIOS/REPARACIONES QUE DEBEN PRESERVARSE
+- MEZCLA: dirección de «bájale al beat» y target espectral para adlibs.
+- Corregido choque de variable entre target LUFS y target de feedback.
+- Alignment: correlación de envolventes RMS a 20 ms, offset conservador y signo documentado.
+- Análisis: LUFS-I/LRA/true peak, espectro por bandas, crest factor, DC y diagnósticos estéreo/energía.
+- Receta EQ/dinámica conservadora basada en el análisis, no en el género.
+- Recomendación de loudness con etiquetas Light/Básico/Habitual/Alto/Personalizado y elección manual.
+- Preview pendiente con aceptar/rechazar/UNDO y limpieza segura sin borrar archivos preexistentes.
+- Los audios originales no se sobrescriben.
+
+PRUEBAS
+- Suite actual: _run_v1_suite.py.
+- Test de ausencia de autotune: _test_v1_no_autotune.py.
+- Otras pruebas activas cubren alignment, receta/render adaptativo, loudness, flujo STEMS, feedback, rechazo de preview, diagnóstico, exportación de varios stems, referencia manual, UNDO y navegación ESC.
+- No confundir pruebas sintéticas con validación audible de canciones reales.
+
+PENDIENTES DE V1 QUE NO DEBEN OCULTARSE
+1. Reproducir y resolver el sonido/artefacto muy fuerte al final de previews usando audio real.
+2. Investigar el rechazo de loudness observado alrededor de -14.19 LUFS y -1.00 dBTP; no declarar solucionado solo por test sintético.
+3. Revisar el balance vocal/beat cuando se piden ajustes de brillo y volumen.
+4. Completar la validación de exportaciones y de los flujos reales, conservando las reparaciones existentes.
+
+REGLAS
+- No modificar ni sobrescribir WAV originales.
+- No reemplazar funciones completas ni aplicar parches a ciegas; hacer cambios quirúrgicos y respaldados.
+- No quitar alignment ni otras funciones por confundirlas con afinación.
+- No reintroducir autotune en ningún modo ni en V2.
+- Ejecutar compilación y suite completa después de cada cambio; reportar solo resultados verificados.
