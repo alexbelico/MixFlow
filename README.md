@@ -2,20 +2,21 @@
 
 Local open-source audio mixing and mastering tool.
 
-It analyzes loudness (LUFS and true peak), applies adaptive EQ and dynamics, supports stem classification and alignment, and includes preview with accept/undo. All processing runs locally.
+It analyzes loudness (LUFS and true peak), applies adaptive EQ and dynamics, supports stem classification and alignment, includes pitch correction in stems mode, and provides preview with accept/undo. All processing runs locally.
 
 ## Features
 
 - Loudness analysis and target levels (Light, Basic, Habitual, High, Custom)
 - Adaptive EQ and dynamics with preview, accept, and undo
 - Stem classification and RMS-based alignment
+- Pitch correction (autotune) available in stems mode
 - Stereo diagnostics (correlation, mid/side, low-level regions)
 - Safe intermediate file cleanup
 - Automated test suite (synthetic signals)
 
 ## Status
 
-V1 is under active validation. Autotune/pitch correction was removed on 2026-10-09. Tests currently pass on synthetic signals; real-world audible validation is still in progress.
+V1 is under active validation. Tests currently pass on synthetic signals; real-world audible validation is still in progress.
 
 ## Installation
 
